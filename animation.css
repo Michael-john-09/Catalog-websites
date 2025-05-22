@@ -1,0 +1,127 @@
+/* Animation Definitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Applied Animations */
+.hero-content {
+  animation: fadeIn 1s ease-out;
+}
+
+.product-card {
+  animation: fadeIn 0.5s ease-out, slideInUp 0.5s ease-out;
+}
+
+.cart-item {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.btn-primary:active {
+  animation: pulse 0.3s ease-out;
+}
+
+.empty-cart-icon svg {
+  animation: spin 10s linear infinite;
+}
+
+/* Animation Delays for Product Grid */
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+.product-card:nth-child(5) { animation-delay: 0.5s; }
+.product-card:nth-child(6) { animation-delay: 0.6s; }
+.product-card:nth-child(7) { animation-delay: 0.7s; }
+
+/* Hover Effects */
+.product-badge {
+  transition: transform var(--transition-fast);
+}
+
+.product-badge:hover {
+  transform: translateY(-2px);
+}
+
+.cart-toggle {
+  transition: transform var(--transition-fast);
+}
+
+.cart-toggle:hover {
+  transform: scale(1.1);
+}
+
+.features-list li::before {
+  transition: transform var(--transition-fast);
+}
+
+.features-list li:hover::before {
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* Active State Animations */
+.btn:active {
+  transform: scale(0.95);
+}
+
+.quantity-btn:active {
+  transform: scale(0.9);
+}
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}

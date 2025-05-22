@@ -1,0 +1,169 @@
+/* Responsive Styles */
+
+/* For devices smaller than 480px (mobile) */
+@media (max-width: 480px) {
+  .nav-container {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--space-2);
+  }
+  
+  .search-container {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .cart-toggle {
+    order: 1;
+    margin-left: 0;
+  }
+  
+  .hero-section {
+    height: 200px;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .filters-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-select {
+    min-width: 100%;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+  
+  .cart-sidebar {
+    width: 100%;
+  }
+  
+  .modal-product-content {
+    flex-direction: column;
+  }
+  
+  .modal-product-image, 
+  .modal-product-details {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  .modal-product-image {
+    margin-bottom: var(--space-4);
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+/* For devices between 481px and 768px (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
+  
+  .search-container {
+    order: 3;
+    width: 100%;
+    margin-top: var(--space-2);
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .filters-container {
+    flex-wrap: wrap;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  
+  .cart-sidebar {
+    width: 80%;
+  }
+  
+  .modal-product-content {
+    flex-direction: column;
+  }
+  
+  .modal-product-image, 
+  .modal-product-details {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  .modal-product-image {
+    margin-bottom: var(--space-4);
+  }
+}
+
+/* For devices between 769px and 992px (small desktops) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+}
+
+/* For devices between 993px and 1200px (large desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .main-container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+/* Print styles */
+@media print {
+  .header, 
+  .footer, 
+  .cart-sidebar, 
+  .product-modal, 
+  .overlay {
+    display: none !important;
+  }
+  
+  .main-container {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+}
