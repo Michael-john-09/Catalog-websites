@@ -22,7 +22,7 @@ const products = [
       "Energy boost"
     ],
     price: 19.99,
-    image: "product pic/FUGABAN_Advertising Posters_20250522_003130_0000.png"
+    image: "FUGABAN_Advertising Posters_20250522_003130_0000.png"
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ const products = [
       "No artificial colors"
     ],
     price: 14.99,
-    image: "product pic/Packaging.jpg"
+    image: "Packaging.jpg"
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ const products = [
       "Low fat"
     ],
     price: 5.49,
-    image: "product pic/ruby.jpg"
+    image: "ruby.jpg"
   },
   {
     id: 5,
@@ -106,7 +106,7 @@ const products = [
       "Natural energizers"
     ],
     price: 3.99,
-    image: "product pic/productnimaykel.png"
+    image: "productnimaykel.png"
   },
   {
     id: 6,
